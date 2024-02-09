@@ -18,10 +18,10 @@
 				</div>
 
 				<div id="menus">
-					<nav id="primary-menu" aria-label="Primary menu">
+					<nav id="primary-menu" aria-label="Primary menu" aria-expanded="false">
 						<?php toms_nav_menu( 'primary' ); ?>
 					</nav>
-					<nav id="secondary-menu" aria-label="Secondary menu">
+					<nav id="secondary-menu" aria-label="Secondary menu" aria-expanded="false">
 						<?php toms_nav_menu( 'secondary' ); ?>
 					</nav>
 				</div>

@@ -23,4 +23,16 @@ const handleMenuToggle = () => {
 			secondaryMenu.setAttribute('aria-expanded', 'false');
 		}
 	});
+
+	const submenuParents = document.querySelectorAll('.menu-item-has-children');
+	submenuParents.forEach((parent) => {
+		const subMenuToggles = parent.querySelector('.submenu-toggle');
+		subMenuToggles.addEventListener('click', (e) => {
+			e.preventDefault();
+			const submenu = parent.querySelector('.submenu');
+			const expanded = submenu.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+			submenu.setAttribute('aria-expanded', expanded);
+			submenu.classList.toggle('is-open');
+		});
+	});
 };
