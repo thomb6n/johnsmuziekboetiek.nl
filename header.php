@@ -17,11 +17,11 @@
 				</div>
 
 				<div id="menus">
-					<nav id="main-menu" aria-label="Main menu">
-						<?php //strl_menu_main( 'main' ); ?>
+					<nav id="primary-menu" aria-label="Primary menu">
+						<?php toms_nav_menu( 'primary' ); ?>
 					</nav>
-					<nav id="submenu" aria-label="Submenu">
-						<?php //strl_menu_main( 'secondary' ); ?>
+					<nav id="secondary-menu" aria-label="Secondary menu">
+						<?php toms_nav_menu( 'secondary' ); ?>
 					</nav>
 				</div>
 

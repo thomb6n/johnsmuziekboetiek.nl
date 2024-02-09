@@ -1,1 +1,39 @@
+.site-header {
+	.header-wrapper {
+		align-items: center;
+		display: flex;
+		gap: 1rem;
+		justify-content: space-between;
 
+		.site-branding {
+			#logo {
+				img {
+					height: 50px;
+					object-fit: contain;
+					object-position: left center;
+					width: 100px;
+				}
+			}
+		}
+
+		#menus {
+			align-items: center;
+			display: flex;
+			flex-grow: 1;
+			gap: 1rem;
+			justify-content: space-between;
+
+			#primary-menu,
+			#secondary-menu {
+				.menu {
+					align-items: center;
+					display: flex;
+					gap: 1rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+}

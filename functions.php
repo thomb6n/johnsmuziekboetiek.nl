@@ -3,6 +3,7 @@
 define( 'THEME_DIR', get_stylesheet_directory() );
 define( 'IMAGEPATH', get_stylesheet_directory_uri() . '/assets/images/' );
 
+include 'includes/classes/class-toms-menu-walker.php';
 include 'includes/bootstrap.php';
 include 'includes/helpers.php';
 include 'includes/cpts.php';
