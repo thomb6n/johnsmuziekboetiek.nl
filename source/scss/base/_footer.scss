@@ -1,1 +1,18 @@
+#site-footer {
+	padding-inline: $padding-inline;
 
+	.footer-columns {
+		.footer-columns-container {
+			display: grid;
+			grid-template-columns: 1fr;
+
+			@include medium {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include large {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+}

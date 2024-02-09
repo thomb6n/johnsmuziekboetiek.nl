@@ -1,0 +1,10 @@
+section {
+	margin-block: $spacing-block;
+	padding-inline: $padding-inline;
+	position: relative;
+
+	&.has-background {
+		margin-block: 0;
+		padding-block: $spacing-block;
+	}
+}

@@ -1,4 +1,8 @@
 .site-header {
+	background-color: #eee;
+	padding-block: 0.75rem;
+	padding-inline: $padding-inline;
+
 	.header-wrapper {
 		align-items: center;
 		display: flex;

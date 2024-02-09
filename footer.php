@@ -1,5 +1,5 @@
 </main>
-	<footer>
+	<footer id="site-footer">
 		<h2>
 			<span class="screen-reader-text">
 				<?php _e( 'Site footer', 'toms' ); ?>
