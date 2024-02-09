@@ -11,7 +11,7 @@ $layouts[ $layout_name ] = array(
 		array(
 			'key'          => 'field_' . $layout_name . '_title',
 			'label'        => __( 'Title', 'toms' ),
-			'name'         => $layout_name . '-title',
+			'name'         => $layout_name . '_title',
 			'type'         => 'text',
 			'instructions' => __( 'This is the H1 of the page, it can only be used once per page.', 'toms' ),
 			'required'     => 1,

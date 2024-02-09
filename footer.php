@@ -14,7 +14,7 @@
 				<div class="footer-column">
 					<?php dynamic_sidebar( 'footer-2' ); ?>
 				</div>
-				<div classs="footer-column">
+				<div class="footer-column">
 					<?php dynamic_sidebar( 'footer-3' ); ?>
 				</div>
 				<div class="footer-column">

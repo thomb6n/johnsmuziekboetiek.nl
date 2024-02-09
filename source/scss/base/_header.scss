@@ -1,7 +1,8 @@
 .site-header {
-	background-color: #eee;
+	background-color: $color-grey-light;
 	padding-block: 0.75rem;
 	padding-inline: $padding-inline;
+	position: relative;
 
 	.header-wrapper {
 		align-items: center;
@@ -20,22 +21,90 @@
 			}
 		}
 
+		#menu-toggle {
+			display: block;
+			padding: 0.5rem;
+			position: relative;
+
+			@include large {
+				display: none;
+			}
+
+			&[data-toggle="closed"] {
+				.open-icon {
+					display: block;
+				}
+
+				.close-icon {
+					display: none;
+				}
+			}
+
+			&[data-toggle="open"] {
+				.open-icon {
+					display: none;
+				}
+
+				.close-icon {
+					display: block;
+				}
+			}
+
+			.close-icon {
+				display: none;
+			}
+		}
+
 		#menus {
-			align-items: center;
-			display: flex;
+			background-color: $color-white;
+			display: none;
+			flex-direction: column;
 			flex-grow: 1;
-			gap: 1rem;
-			justify-content: space-between;
+			height: calc(100vh - 73px);
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			z-index: $z-index-high;
+
+			@include large {
+				align-items: center;
+				background-color: transparent;
+				display: flex;
+				flex-direction: row;
+				flex-grow: 1;
+				gap: 1rem;
+				height: auto;
+				justify-content: space-between;
+				position: relative;
+			}
+
+			&.menu-open {
+				display: flex;
+			}
 
 			#primary-menu,
 			#secondary-menu {
+				margin: 1rem 0;
+
+				@include large {
+					margin: 0;
+				}
+
 				.menu {
-					align-items: center;
 					display: flex;
+					flex-direction: column;
 					gap: 1rem;
 					list-style: none;
 					margin: 0;
-					padding: 0;
+					padding: 0 $padding-inline;
+
+					@include large {
+						align-items: center;
+						flex-direction: row;
+						gap: 1rem;
+						padding: 0;
+					}
 				}
 			}
 		}

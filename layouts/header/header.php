@@ -1,6 +1,6 @@
 <?php
 $layout_name = basename( __FILE__, '.php' );
-$prefix      = $layout_name . '-';
+$prefix      = $layout_name . '_';
 $title       = get_sub_field( $prefix . 'title' );
 ?>
 <section class="header">

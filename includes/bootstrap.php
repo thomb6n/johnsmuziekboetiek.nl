@@ -43,7 +43,7 @@ function tom_register_sidebars() {
 				'name'          => __( 'Footer' ) . ' ' . $i,
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<span class="widget-title">',
+				'before_title'  => '<span class="widget-title h5">',
 				'after_title'   => '</span>',
 			)
 		);
@@ -55,7 +55,7 @@ function tom_register_sidebars() {
 				'name'          => __( 'Copyright' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<span class="widget-title">',
+				'before_title'  => '<span class="copyright-title">',
 				'after_title'   => '</span>',
 			)
 		);

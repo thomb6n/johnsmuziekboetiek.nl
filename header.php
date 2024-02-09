@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<script src="https://kit.fontawesome.com/84c396f697.js" crossorigin="anonymous"></script>
 	</head>
 	<body <?php body_class(); ?>>
 		<header id="site-header" class="site-header">
@@ -25,15 +26,13 @@
 					</nav>
 				</div>
 
-				<div class="menu-toggle" style="display: none;">
-					<button class="menu-icon" type="button">
-						<i class="fa-regular fa-bars"></i>
-						<i class="fa-regular fa-times"></i>
-						<span class="screen-reader-text">
-							<?php _e( 'Menu', 'toms' ); ?>
-						</span>
-					</button>
-				</div>
+				<button id="menu-toggle" type="button" aria-label="Toggle the navigation" data-toggle="closed">
+					<i class="fa-regular fa-bars open-icon"></i>
+					<i class="fa-regular fa-times close-icon"></i>
+					<span class="screen-reader-text">
+						<?php _e( 'Menu', 'toms' ); ?>
+					</span>
+				</button>
 			</div>
 		</header>
 		<main id="main">

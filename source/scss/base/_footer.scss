@@ -1,7 +1,8 @@
 #site-footer {
-	padding-inline: $padding-inline;
-
 	.footer-columns {
+		margin-top: $spacing-block;
+		padding-inline: $padding-inline;
+
 		.footer-columns-container {
 			display: grid;
 			grid-template-columns: 1fr;
@@ -13,6 +14,25 @@
 			@include large {
 				grid-template-columns: repeat(4, 1fr);
 			}
+
+			.footer-column {
+				.menu {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		background-color: $color-grey-light;
+		margin-top: 2rem;;
+		padding-block: 0.75rem;
+		padding-inline: $padding-inline;
+
+		.copyright-title {
+			font-size: $font-size-body-small;
 		}
 	}
 }
