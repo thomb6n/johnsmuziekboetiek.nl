@@ -8,3 +8,13 @@ section {
 		padding-block: $spacing-block;
 	}
 }
+
+.container {
+	margin-inline: auto;
+	max-width: $container-max-width;
+}
+
+.container-large {
+	margin-inline: auto;
+	max-width: $container-large-max-width;
+}
