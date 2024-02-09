@@ -5,7 +5,7 @@ module.exports = {
   entry: "./source/javascript/index.js",
   mode: "development",
   output: {
-    path: path.resolve(__dirname, "assets"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   module: {
@@ -20,6 +20,10 @@ module.exports = {
 						}
 					}
 				}],
+      },
+			{
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset",
       },
     ],
   },
