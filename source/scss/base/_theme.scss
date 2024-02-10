@@ -7,9 +7,25 @@ $color-black: #222;
 $color-white: #fff;
 $color-grey-light: #eee;
 
+$color-gradient: linear-gradient(
+	132deg,
+	rgba(39, 58, 167, 0.23433123249299714) 0%,
+	rgba(23, 159, 111, 0.13629201680672265) 45%,
+	rgba(255, 255, 255, 1) 100%
+);
+$color-gradient-dark: linear-gradient(
+	132deg,
+	rgba(39, 58, 167, 1) 0%,
+	rgba(23, 159, 111, 1) 45%,
+	rgba(255, 255, 255, 1) 100%
+);
+
 $color-link: $color-secondary;
 
 $z-index-high: 99;
 
 $container-max-width: 1200px;
 $container-large-max-width: 1400px;
+
+$border-radius: 6px;
+$border-radius-small: 3px;

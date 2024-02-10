@@ -1,204 +1,227 @@
-.site-header {
-	background-color: $color-white;
-	border-radius: 6px;
-	margin: 1rem;
-	padding-block: 0.75rem;
+.admin-bar {
+	@media only screen and (min-width: 600px) and (max-width: 782px) {
+		.site-header-wrapper {
+			top: calc(1rem + 46px);
+		}
+	}
+
+	@media only screen and (min-width: 783px) {
+		.site-header-wrapper {
+			top: calc(1rem + 32px);
+		}
+	}
+}
+
+.site-header-wrapper {
+	margin-block: 1rem;
 	padding-inline: $padding-inline;
-	position: relative;
+	position: sticky;
+	top: 1rem;
+	width: 100%;
+	z-index: 1;
 
-	.header-wrapper {
-		align-items: center;
-		display: flex;
-		gap: 1rem;
-		justify-content: space-between;
+	.site-header {
+		background-color: rgba($color-white, 0.98);
+		border-radius: $border-radius;
+		padding-block: 0.75rem;
+		padding-inline: $padding-inline;
 
-		@include large {
-			gap: 3rem;
-		}
-
-		.site-branding {
-			#logo {
-				img {
-					height: 60px;
-					object-fit: contain;
-					object-position: left center;
-					width: 140px;
-				}
-			}
-		}
-
-		#menu-toggle {
-			background-color: transparent;
-			border: 0;
-			color: $color-black;
-			display: block;
-			font-size: 1.5rem;
-			padding: 0.5rem;
-			position: relative;
+		.header-wrapper {
+			align-items: center;
+			display: flex;
+			gap: 1rem;
+			justify-content: space-between;
 
 			@include large {
-				display: none;
+				gap: 3rem;
 			}
 
-			&[data-toggle="closed"] {
-				.open-icon {
-					display: block;
-				}
-
-				.close-icon {
-					display: none;
-				}
-			}
-
-			&[data-toggle="open"] {
-				.open-icon {
-					display: none;
-				}
-
-				.close-icon {
-					display: block;
+			.site-branding {
+				#logo {
+					img {
+						height: 60px;
+						object-fit: contain;
+						object-position: left center;
+						width: 140px;
+					}
 				}
 			}
 
-			.close-icon {
-				display: none;
-			}
-		}
-
-		#menus {
-			background-color: $color-white;
-			border-radius: 6px;
-			display: none;
-			flex-direction: column;
-			flex-grow: 1;
-			height: calc(100vh - 73px);
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: calc(100% + 1rem);
-			z-index: $z-index-high;
-
-			@include large {
-				align-items: center;
+			#menu-toggle {
 				background-color: transparent;
-				display: flex;
-				flex-direction: row;
-				flex-grow: 1;
-				gap: 1rem;
-				height: auto;
-				justify-content: space-between;
+				border: 0;
+				color: $color-black;
+				display: block;
+				font-size: 1.5rem;
+				padding: 0.5rem;
 				position: relative;
-			}
-
-			&.menu-open {
-				display: flex;
-			}
-
-			#primary-menu,
-			#secondary-menu {
-				margin: 1rem 0;
 
 				@include large {
-					margin: 0;
+					display: none;
 				}
 
-				a {
-					color: $color-secondary;
+				&[data-toggle="closed"] {
+					.open-icon {
+						display: block;
+					}
 
-					@include large {
-						color: $color-secondary;
+					.close-icon {
+						display: none;
 					}
 				}
 
-				.menu {
+				&[data-toggle="open"] {
+					.open-icon {
+						display: none;
+					}
+
+					.close-icon {
+						display: block;
+					}
+				}
+
+				.close-icon {
+					display: none;
+				}
+			}
+
+			#menus {
+				background-color: $color-white;
+				border-radius: $border-radius;
+				display: none;
+				flex-direction: column;
+				flex-grow: 1;
+				height: calc(100vh - 73px);
+				margin-inline: $padding-inline;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: calc(100% + 1rem);
+				z-index: $z-index-high;
+
+				@include large {
+					align-items: center;
+					background-color: transparent;
 					display: flex;
-					flex-direction: column;
+					flex-direction: row;
+					flex-grow: 1;
 					gap: 1rem;
-					list-style: none;
-					margin: 0;
-					padding: 0 $padding-inline;
+					height: auto;
+					justify-content: space-between;
+					margin-inline: 0;
+					position: relative;
+				}
+
+				&.menu-open {
+					display: flex;
+				}
+
+				#primary-menu,
+				#secondary-menu {
+					margin: 1rem 0;
 
 					@include large {
-						align-items: center;
-						flex-direction: row;
-						gap: 1.5rem;
-						padding: 0;
+						margin: 0;
 					}
 
-					.menu-item {
-						&.menu-item-has-children {
-							position: relative;
+					a {
+						color: $color-secondary;
 
-							a {
-								align-items: center;
-								display: flex;
-								justify-content: space-between;
+						@include large {
+							color: $color-secondary;
+						}
+					}
 
-								i {
-									padding: 0.5rem;
-									position: absolute;
-									right: 0;
+					.menu {
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+						list-style: none;
+						margin: 0;
+						padding: 0 $padding-inline;
 
-									@include large {
-										margin-left: 0.25rem;
-										position: relative;
+						@include large {
+							align-items: center;
+							flex-direction: row;
+							gap: 1.5rem;
+							padding: 0;
+						}
 
-										&::before {
-											inset: 0;
-											position: absolute;
+						.menu-item {
+							&.menu-item-has-children {
+								position: relative;
+
+								a {
+									align-items: center;
+									display: flex;
+									justify-content: space-between;
+
+									i {
+										padding: 0.5rem;
+										position: absolute;
+										right: 0;
+
+										@include large {
+											margin-left: 0.25rem;
+											position: relative;
+
+											&::before {
+												inset: 0;
+												position: absolute;
+											}
 										}
 									}
 								}
-							}
 
-							.submenu {
-								display: none;
+								.submenu {
+									display: none;
 
-								&.is-open {
-									display: flex;
-									flex-direction: column;
-									gap: 1rem;
-									list-style: none;
-									margin: 0;
-									padding: 0.5rem;
-								}
-							}
-
-							@include large {
-								&:hover {
-									white-space: nowrap;
-
-									.submenu {
-										background-color: $color-white;
-										display: block;
-										left: 0;
+									&.is-open {
+										display: flex;
+										flex-direction: column;
+										gap: 1rem;
 										list-style: none;
 										margin: 0;
-										padding: 1rem $padding-inline;
-										position: absolute;
-										top: 100%;
+										padding: 0.5rem;
+									}
+								}
+
+								@include large {
+									&:hover {
+										white-space: nowrap;
+
+										.submenu {
+											background-color: $color-white;
+											display: block;
+											left: 0;
+											list-style: none;
+											margin: 0;
+											padding: 1rem $padding-inline;
+											position: absolute;
+											top: 100%;
+										}
 									}
 								}
 							}
 						}
 					}
 				}
-			}
 
-			#secondary-menu {
-				display: flex;
-				flex-direction: column;
-				gap: 1rem;
+				#secondary-menu {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
 
-				.woocommerce-icons {
-					a {
-						font-size: 1.25rem;
+					.woocommerce-icons {
+						a {
+							font-size: 1.25rem;
+						}
 					}
-				}
 
-				@include large {
-					flex-direction: row;
-					gap: 3rem;
+					@include large {
+						flex-direction: row;
+						gap: 3rem;
+					}
 				}
 			}
 		}

@@ -6,12 +6,7 @@ body {
 				rgba(255, 255, 255, 1) 10%,
 				rgba(255, 255, 255, 0) 100%
 			),
-			linear-gradient(
-				132deg,
-				rgba(39, 58, 167, 0.23433123249299714) 0%,
-				rgba(23, 159, 111, 0.13629201680672265) 45%,
-				rgba(255, 255, 255, 1) 100%
-			);
+			$color-gradient;
 		content: "";
 		position: absolute;
 		height: 1000px;

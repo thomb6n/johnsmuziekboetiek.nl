@@ -20,6 +20,16 @@ $pretitle    = get_sub_field($prefix . 'pretitle');
 			<?php
 			}
 			?>
+
+			<form role="search" method="get" class="search-form" action="<?php echo site_url('/zoeken'); ?>">
+				<label>
+					<span class="screen-reader-text">
+						<?php _e('Search for:', 'toms') ?>
+					</span>
+					<input type="search" class="search-field" name="searchwp" placeholder="<?php _e('What are you looking for?', 'toms') ?>" value="<?php echo isset($_GET['searchwp']) ? esc_attr($_GET['searchwp']) : '' ?>" title="<?php _e('Search for:', 'toms') ?>" />
+				</label>
+				<input type="submit" class="search-submit" value="<?php echo _e('Search', 'toms') ?>" />
+			</form>
 		</div>
 	</div>
 </section>

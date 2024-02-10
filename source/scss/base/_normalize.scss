@@ -32,6 +32,10 @@ $color: #000 !default;
 // HTML5 display definitions
 // =============================================================================
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 }
