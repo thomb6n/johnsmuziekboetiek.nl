@@ -150,6 +150,10 @@
 						> .menu-item {
 							a {
 								font-size: 1.5rem;
+
+								@include large {
+									font-size: $font-size-body;
+								}
 							}
 						}
 
