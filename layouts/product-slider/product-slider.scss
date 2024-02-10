@@ -11,7 +11,8 @@
 			left: -1rem;
 			position: absolute;
 			top: -2rem;
-			width: 500px;
+			max-width: 500px;
+			width: 60%;
 			z-index: -1;
 		}
 	}
@@ -19,6 +20,4 @@
 	.title {
 		margin-block: 0 2rem;
 	}
-
-	overflow: hidden;
 }
