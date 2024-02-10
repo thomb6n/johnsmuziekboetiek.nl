@@ -3,6 +3,7 @@ $layout_name = basename(__FILE__, '.php');
 $prefix      = $layout_name . '_';
 $title       = get_sub_field($prefix . 'title');
 $show        = get_sub_field($prefix . 'show');
+$color       = get_sub_field($prefix . 'color');
 $products    = array();
 
 if ('latest' === $show) {
@@ -17,7 +18,7 @@ if ('latest' === $show) {
 ?>
 <section class="product-slider">
 	<div class="container">
-		<div class="content">
+		<div class="content <?php echo $color ? 'bg-light-' . $color : ''; ?>">
 			<?php
 			if ($title) {
 			?>
@@ -26,7 +27,7 @@ if ('latest' === $show) {
 			}
 			?>
 
-			<div class="product-slider-wrapper">
+			<div class="product-slider-wrapper" data-id="<?php echo get_row_index(); ?>">
 				<div class="swiper-wrapper">
 					<?php
 					if (is_array($products)) {
@@ -52,9 +53,10 @@ if ('latest' === $show) {
 					}
 					?>
 				</div>
-				<!-- <div class="swiper-pagination"></div> -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+			</div>
+			<div class="swiper-arrows">
+				<div class="swiper-button-prev swiper-button-prev-<?php echo get_row_index(); ?>"></div>
+				<div class="swiper-button-next swiper-button-next-<?php echo get_row_index(); ?>"></div>
 			</div>
 		</div>
 	</div>

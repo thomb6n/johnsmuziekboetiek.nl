@@ -3,37 +3,31 @@ import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/scss";
 import "swiper/css/navigation";
-// import "swiper/css/pagination";
 
 document.addEventListener("DOMContentLoaded", () => {
 	initSliders();
 });
 
 const initSliders = () => {
-	const swiper = new Swiper(".product-slider-wrapper", {
-		modules: [Navigation, Pagination],
-
-		slidesPerView: 1,
-		spaceBetween: 16,
-
-		breakpoints: {
-			640: {
-				slidesPerView: 2,
+	document.querySelectorAll(".product-slider-wrapper").forEach((el, key) => {
+		const id = el.dataset.id;
+		const swiper = new Swiper(el, {
+			a11y: true,
+			modules: [Navigation, Pagination],
+			slidesPerView: 1,
+			spaceBetween: 16,
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+				},
+				1024: {
+					slidesPerView: 3,
+				},
 			},
-			1024: {
-				slidesPerView: 3,
+			navigation: {
+				nextEl: `.swiper-button-next-${id}`,
+				prevEl: `.swiper-button-prev-${id}`,
 			},
-		},
-
-		// If we need pagination
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// },
-
-		// Navigation arrows
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
+		});
 	});
 };

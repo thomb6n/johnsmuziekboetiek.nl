@@ -23,6 +23,7 @@
 	.site-header {
 		background-color: rgba($color-white, 0.98);
 		border-radius: $border-radius;
+		box-shadow: $boxshadow-md;
 		padding-block: 0.75rem;
 		padding-inline: $padding-inline;
 
@@ -42,7 +43,7 @@
 						height: 60px;
 						object-fit: contain;
 						object-position: left center;
-						width: 140px;
+						width: 130px;
 					}
 				}
 			}

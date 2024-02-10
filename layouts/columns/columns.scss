@@ -13,7 +13,7 @@
 		}
 
 		.column {
-			border: 2px solid rgba($color-secondary, 0.4);
+			border: 2px solid rgba($color-secondary, 0.5);
 			border-radius: $border-radius;
 			padding: 2rem;
 
@@ -33,7 +33,7 @@
 			}
 
 			&:hover {
-				border: 2px solid rgba($color-secondary, 0.8);
+				border: 2px solid rgba($color-secondary, 0.9);
 
 				&.bg-light-yellow,
 				&.bg-light-red,
@@ -46,7 +46,7 @@
 
 				.title {
 					text-decoration: underline;
-					text-decoration-color: $color-primary;
+					text-decoration-color: $color-secondary;
 					text-decoration-thickness: 1.5px;
 				}
 			}
@@ -60,25 +60,25 @@
 
 			&.bg-light-yellow {
 				&::before {
-					background-color: rgba($color-tertiary, 0.1);
+					background-color: rgba($color-tertiary, 0.4);
 				}
 			}
 
 			&.bg-light-blue {
 				&::before {
-					background-color: rgba($color-secondary, 0.1);
+					background-color: rgba($color-secondary, 0.4);
 				}
 			}
 
 			&.bg-light-green {
 				&::before {
-					background-color: rgba($color-primary, 0.1);
+					background-color: rgba($color-primary, 0.4);
 				}
 			}
 
 			&.bg-light-red {
 				&::before {
-					background-color: rgba($color-quaternary, 0.1);
+					background-color: rgba($color-quaternary, 0.4);
 				}
 			}
 		}

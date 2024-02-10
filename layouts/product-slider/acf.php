@@ -28,5 +28,18 @@ $layouts[$layout_name] = array(
 			'required'      => 1,
 			'default_value' => 'latest',
 		),
+		array(
+			'key'      => 'field_' . $layout_name . '_color',
+			'label'    => __('Color', 'toms'),
+			'name'     => $layout_name . '_color',
+			'type'     => 'radio',
+			'choices'  => array(
+				'yellow' => __('Yellow', 'toms'),
+				'blue'   => __('Blue', 'toms'),
+				'green'  => __('Green', 'toms'),
+				'red'    => __('Red', 'toms'),
+			),
+			'required' => 1,
+		),
 	),
 );

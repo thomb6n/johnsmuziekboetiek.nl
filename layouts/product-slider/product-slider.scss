@@ -1,19 +1,41 @@
 .product-slider {
 	.content {
 		padding-block: 4rem;
-		padding-left: 2rem;
 		position: relative;
 
 		&::before {
-			background-color: rgba($color-tertiary, 0.1);
-			bottom: -2rem;
+			bottom: 0;
 			content: "";
-			left: -1rem;
+			left: 5rem;
 			position: absolute;
-			top: -2rem;
-			max-width: 500px;
-			width: 60%;
+			top: 0;
+			max-width: 700px;
+			width: 70%;
 			z-index: -1;
+		}
+
+		&.bg-light-yellow {
+			&::before {
+				background-color: rgba($color-tertiary, 0.25);
+			}
+		}
+
+		&.bg-light-blue {
+			&::before {
+				background-color: rgba($color-secondary, 0.25);
+			}
+		}
+
+		&.bg-light-green {
+			&::before {
+				background-color: rgba($color-primary, 0.25);
+			}
+		}
+
+		&.bg-light-red {
+			&::before {
+				background-color: rgba($color-quaternary, 0.25);
+			}
 		}
 	}
 
