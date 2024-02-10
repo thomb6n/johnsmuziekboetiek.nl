@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins&display=swap");
 
-$font-family-body: "Inter", "sans-serif";
-$font-family-heading: "Lora", "sans-serif";
+$font-family-body: "Outfit", "sans-serif";
+$font-family-heading: "Poppins", "sans-serif";
 $icons: "Font Awesome 6 Pro";
 
 $font-size-body-large: 1.2rem;
@@ -26,7 +28,7 @@ h6,
 	font-family: $font-family-heading;
 	font-weight: 600;
 	letter-spacing: -0.022rem;
-	line-height: 1.25;
+	line-height: 1.2;
 	margin-block: 0 1rem;
 }
 
@@ -91,18 +93,4 @@ label {
 	font-family: $font-family-body;
 	font-weight: 400;
 	line-height: 1.5;
-}
-
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	word-wrap: normal !important;
-	border: 0;
-	-webkit-clip-path: inset(50%);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
 }

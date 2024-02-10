@@ -9,8 +9,51 @@ body {
 			$color-gradient;
 		content: "";
 		position: absolute;
-		height: 1000px;
+		height: 400px;
 		inset: 0 0 auto;
 		z-index: -1;
 	}
+
+	&::after {
+		background: linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 1) 10%,
+				rgba(255, 255, 255, 1) 0%,
+				rgba(255, 255, 255, 0) 100%
+			),
+			linear-gradient(
+				312deg,
+				rgba(39, 58, 167, 0.23433123249299714) 0%,
+				rgba(228, 155, 53, 0.136) 55%,
+				rgba(255, 255, 255, 1) 100%
+			);
+		content: "";
+		position: absolute;
+		height: 300px;
+		inset: auto 0 0 0;
+		z-index: -1;
+	}
+}
+
+div:has(.overlay-link) {
+	position: relative;
+
+	.overlay-link {
+		inset: 0;
+		position: absolute;
+	}
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	word-wrap: normal !important;
+	border: 0;
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }

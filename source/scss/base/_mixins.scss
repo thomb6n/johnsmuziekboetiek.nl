@@ -18,3 +18,14 @@
 		@content;
 	}
 }
+
+@mixin animated-underline($color: $color-primary) {
+	transition: text-decoration-color 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+	text-decoration-color: transparent;
+	text-underline-offset: 2px;
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: $color;
+	}
+}
