@@ -40,7 +40,8 @@ $layouts[$layout_name] = array(
 					'choices'  => array(
 						'yellow' => __('Yellow', 'toms'),
 						'blue'   => __('Blue', 'toms'),
-						'green' => __('Green', 'toms'),
+						'green'  => __('Green', 'toms'),
+						'red'    => __('Red', 'toms'),
 					),
 					'required' => 1,
 				),

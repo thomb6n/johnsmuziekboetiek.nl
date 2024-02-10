@@ -67,3 +67,46 @@ input[type="submit"],
 	text-align: center;
 	text-transform: uppercase;
 }
+
+.product-slide {
+	display: flex;
+	gap: 0.5rem;
+	overflow-wrap: anywhere;
+
+	@include large {
+		gap: 1.5rem;
+	}
+
+	&:hover {
+		.product-title {
+			text-decoration: underline;
+			text-decoration-color: $color-primary;
+			text-underline-offset: 2px;
+		}
+	}
+
+	.product-image {
+		width: 40%;
+	}
+
+	.product-info {
+		display: flex;
+		gap: 0.5rem;
+		flex-direction: column;
+		justify-content: center;
+
+		.product-title {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			max-height: 64px;
+			-webkit-line-clamp: 3;
+			margin: 0;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.product-price {
+			margin: 0;
+		}
+	}
+}
