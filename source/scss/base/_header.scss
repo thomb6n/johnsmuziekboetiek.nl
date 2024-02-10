@@ -1,5 +1,7 @@
 .site-header {
-	background-color: $color-primary;
+	background-color: $color-white;
+	border-radius: 6px;
+	margin: 1rem;
 	padding-block: 0.75rem;
 	padding-inline: $padding-inline;
 	position: relative;
@@ -28,7 +30,7 @@
 		#menu-toggle {
 			background-color: transparent;
 			border: 0;
-			color: $color-white;
+			color: $color-black;
 			display: block;
 			font-size: 1.5rem;
 			padding: 0.5rem;
@@ -65,6 +67,7 @@
 
 		#menus {
 			background-color: $color-white;
+			border-radius: 6px;
 			display: none;
 			flex-direction: column;
 			flex-grow: 1;
@@ -72,7 +75,7 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-			top: 100%;
+			top: calc(100% + 1rem);
 			z-index: $z-index-high;
 
 			@include large {
@@ -103,7 +106,7 @@
 					color: $color-secondary;
 
 					@include large {
-						color: $color-white;
+						color: $color-secondary;
 					}
 				}
 

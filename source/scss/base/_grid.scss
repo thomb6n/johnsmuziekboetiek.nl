@@ -7,6 +7,10 @@ section {
 		margin-block: 0;
 		padding-block: $spacing-block;
 	}
+
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 .container {

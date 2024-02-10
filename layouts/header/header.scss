@@ -1,1 +1,21 @@
+.header {
+	padding-block: 4rem;
 
+	.content {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+
+		.pretitle {
+			color: $color-primary;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.title {
+			font-weight: 600;
+			max-width: 800px;
+			text-align: center;
+		}
+	}
+}
