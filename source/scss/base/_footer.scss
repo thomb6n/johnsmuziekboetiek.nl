@@ -1,10 +1,12 @@
 #site-footer {
+	margin-top: $spacing-block;
+
 	.footer-columns {
-		margin-top: $spacing-block;
 		padding-inline: $padding-inline;
 
 		.footer-columns-container {
 			display: grid;
+			gap: 1rem;
 			grid-template-columns: 1fr;
 
 			@include medium {
@@ -25,14 +27,19 @@
 		}
 	}
 
-	.copyright {
-		background-color: $color-grey-light;
-		margin-top: 2rem;;
-		padding-block: 0.75rem;
-		padding-inline: $padding-inline;
+	.copyright-wrapper {
+		background-color: $color-secondary;
 
-		.copyright-title {
-			font-size: $font-size-body-small;
+		.copyright {
+			margin-top: 2rem;;
+			padding-block: 1.25rem;
+			padding-inline: $padding-inline;
+
+			p {
+				color: $color-white;
+				margin: 0;
+			}
 		}
 	}
+
 }

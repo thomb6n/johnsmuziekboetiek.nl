@@ -1,1 +1,32 @@
+a {
+	color: $color-link;
+	text-decoration: none;
 
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.top-bar {
+	background-color: $color-tertiary;
+	padding-inline: $padding-inline;
+	padding-block: 0.5rem;
+
+	.top-bar-content {
+		display: flex;
+		justify-content: space-between;
+
+		.top-bar-right {
+			display: none;
+
+			@include large {
+				display: block;
+			}
+		}
+
+		p {
+			font-size: $font-size-body-small;
+			margin: 0;
+		}
+	}
+}
